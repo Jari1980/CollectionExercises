@@ -24,6 +24,9 @@ public class Main {
                     case 3:
                         exercise3();
                         break;
+                    case 4:
+                        exercise4();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -35,6 +38,26 @@ public class Main {
             }
         }
     }
+    public static void exercise4(){
+        System.out.println("Creating a List list1: ");
+        List<String> list1 = new ArrayList<String>();
+        System.out.println("Populating the list1 with days of week: ");
+        for(int i = 0; i < 7; i++){
+            String day = String.valueOf(LocalDate.now().plusDays(i).getDayOfWeek());
+            list1.add(day);
+        }
+        System.out.println("Creating list2 with subset of the first 3 elements in list1: ");
+        List<String> list2 = list1.subList(0,3);
+        System.out.println("list1: ");
+        for(String element : list1){
+            System.out.println(element);
+        }
+        System.out.println("list2: ");
+        for(String element : list2){
+            System.out.println(element);
+        }
+    }
+
     public static void exercise3(){
         System.out.println("Creating a List list: ");
         List<String> list = new ArrayList<String>();
