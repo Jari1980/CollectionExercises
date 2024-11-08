@@ -3,10 +3,8 @@ package org.example;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,6 +35,9 @@ public class Main {
                     case 7:
                         exercise7();
                         break;
+                    case 8:
+                        exercise8();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -48,6 +49,19 @@ public class Main {
             }
         }
     }
+    public static void exercise8(){
+        System.out.println("Creating HashSet hashSet and populating it with random names: ");
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Jari Testar");
+        hashSet.add("Billy Gate");
+        hashSet.add("Michel Jeckson");
+        hashSet.add("Super Broccoli");
+        System.out.println("hashSet: " + hashSet);
+        System.out.println("Sorting hashSet by using Set: ");
+        Set<String> set = hashSet.stream().sorted().collect(Collectors.toCollection(LinkedHashSet::new));
+        System.out.println("set: " + set);
+    }
+
     public static void exercise7(){
         System.out.println("Creating HashSet hashSet and populating it with random names: ");
         HashSet<String> hashSet = new HashSet<>();
