@@ -21,6 +21,9 @@ public class Main {
                     case 2:
                         exercise2();
                         break;
+                    case 3:
+                        exercise3();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -32,6 +35,30 @@ public class Main {
             }
         }
     }
+    public static void exercise3(){
+        System.out.println("Creating a List list: ");
+        List<String> list = new ArrayList<String>();
+        System.out.println("Populating the list with days of week excluding \"THURSDAY\": ");
+        for(int i = 0; i < 7; i++){
+            String day = String.valueOf(LocalDate.now().plusDays(i).getDayOfWeek());
+            if(!day.equals("THURSDAY")){
+                list.add(day);
+            }
+        }
+        System.out.println("List w/o Thursday: ");
+        for(String element : list){
+            System.out.println(element);
+        }
+        System.out.println("Finding out index of friday since this is where thursday is going to be placed: ");
+        int index = list.indexOf("FRIDAY");
+        System.out.println("Adding thursday to correct place: ");
+        list.add(index, "THURSDAY");
+        System.out.println("List after adding thursday to correct place: ");
+        for(String element : list){
+            System.out.println(element);
+        }
+    }
+
     public static void exercise2(){
         System.out.println("Creating a List list: ");
         List<String> list = new ArrayList<String>();
