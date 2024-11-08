@@ -54,7 +54,7 @@ public class Main {
             String day = String.valueOf(LocalDate.now().plusDays(i).getDayOfWeek());
             list.add(day);
         }
-        System.out.println("Printing list with toString: ");
-        System.out.println(list.toString());
+        System.out.println("Printing list ");
+        System.out.println(list);
     }
 }
