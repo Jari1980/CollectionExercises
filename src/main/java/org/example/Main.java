@@ -31,6 +31,9 @@ public class Main {
                     case 5:
                         exercise5();
                         break;
+                    case 6:
+                        exercise6();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -42,6 +45,21 @@ public class Main {
             }
         }
     }
+    public static void exercise6(){
+        System.out.println("Creating HashSet hashSet and populating it with days of week: ");
+        HashSet<String> hashSet = new HashSet<String>();
+        System.out.println("Populating hashSet with weekdays: ");
+        for(int i = 0; i < 7; i++){
+            String day = String.valueOf(LocalDate.now().plusDays(i).getDayOfWeek());
+            hashSet.add(day);
+        }
+        System.out.println("Converting hashSet to arrayList: ");
+        ArrayList<String> arrList = new ArrayList<>();
+        arrList.addAll(hashSet);
+        System.out.println("hashSet: " + hashSet);
+        System.out.println("arrList: " + arrList);
+    }
+
     public static void exercise5(){
         System.out.println("Creating HashSet hashSet: ");
         HashSet<String> hashSet = new HashSet<String>();
