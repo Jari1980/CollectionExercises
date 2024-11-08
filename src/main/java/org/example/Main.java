@@ -38,6 +38,9 @@ public class Main {
                     case 8:
                         exercise8();
                         break;
+                    case 9:
+                        exercise9();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -49,6 +52,18 @@ public class Main {
             }
         }
     }
+    public static void exercise9(){
+        System.out.println("Creating a new hashMap of type <Integer,String> and populating it with elements containing " +
+                "id(Integer) and car brand(String): ");
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(0, "Ferrari");
+        hashMap.put(1, "VolksWagen");
+        hashMap.put(2, "Mercedes");
+        hashMap.put(3, "Mazda");
+        hashMap.put(4, "Toyota");
+        System.out.println("hashMap: " + hashMap);
+    }
+
     public static void exercise8(){
         System.out.println("Creating HashSet hashSet and populating it with random names: ");
         HashSet<String> hashSet = new HashSet<>();
