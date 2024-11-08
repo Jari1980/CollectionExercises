@@ -34,6 +34,9 @@ public class Main {
                     case 6:
                         exercise6();
                         break;
+                    case 7:
+                        exercise7();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -45,6 +48,23 @@ public class Main {
             }
         }
     }
+    public static void exercise7(){
+        System.out.println("Creating HashSet hashSet and populating it with random names: ");
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Jari Testar");
+        hashSet.add("Billy Gate");
+        hashSet.add("Michel Jeckson");
+        hashSet.add("Super Broccoli");
+        System.out.println("Converting hashSet to ArrayList: ");
+        ArrayList<String> arrList = new ArrayList<>();
+        arrList.addAll(hashSet);
+        System.out.println("arrList: " + arrList); //[Billy Gate, Jari Testar, Super Broccoli, Michel Jeckson]
+        System.out.println("Sorting arrList manually in alphabetic order: ");
+        arrList.remove(2);
+        arrList.add(3, "Super Broccoli");
+        System.out.println("arrList sorted manually: " + arrList);
+    }
+
     public static void exercise6(){
         System.out.println("Creating HashSet hashSet and populating it with days of week: ");
         HashSet<String> hashSet = new HashSet<String>();
