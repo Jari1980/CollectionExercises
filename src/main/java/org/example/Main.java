@@ -47,6 +47,9 @@ public class Main {
                     case 11:
                         exercise11();
                         break;
+                    case 12:
+                        exercise12();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -58,6 +61,21 @@ public class Main {
             }
         }
     }
+    public static void exercise12(){
+        System.out.println("Creating a class Car with fields Id, Brand, Model with getters and setters");
+        System.out.println("Creating a hashMap<Integer, Car>: ");
+        HashMap<Integer, Car> hashMap = new HashMap<>();
+        System.out.println("Creating a instance of Car:");
+        Car vehicle = new Car();
+        vehicle.setId(1);
+        vehicle.setBrand("BMW");
+        vehicle.setModel("Broccoli");
+        System.out.println("Populating hashMap with id and the car object created: ");
+        hashMap.put(0,vehicle);
+        System.out.println("Printing out values in hashMap, id: " + hashMap.get(0).getId() + ", brand: " + hashMap.get(0).getBrand() + ", model: " + hashMap.get(0).getModel());
+
+    }
+
     public static void exercise11(){
         System.out.println("Creating a new hashMap of type <Integer,String> and populating it with elements containing " +
                 "id(Integer) and car brand(String): ");
