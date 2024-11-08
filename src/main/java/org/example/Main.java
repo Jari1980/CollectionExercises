@@ -4,6 +4,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -27,6 +28,9 @@ public class Main {
                     case 4:
                         exercise4();
                         break;
+                    case 5:
+                        exercise5();
+                        break;
                     default:
                         System.out.println("There is no such exercise.");
                         break;
@@ -38,6 +42,18 @@ public class Main {
             }
         }
     }
+    public static void exercise5(){
+        System.out.println("Creating HashSet hashSet: ");
+        HashSet<String> hashSet = new HashSet<String>();
+        System.out.println("Populating hashSet with weekdays: ");
+        for(int i = 0; i < 7; i++){
+            String day = String.valueOf(LocalDate.now().plusDays(i).getDayOfWeek());
+            hashSet.add(day);
+        }
+        System.out.println("Printing out hashSet: ");
+        System.out.println(hashSet);
+    }
+
     public static void exercise4(){
         System.out.println("Creating a List list1: ");
         List<String> list1 = new ArrayList<String>();
